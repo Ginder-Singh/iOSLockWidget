@@ -10,6 +10,7 @@ import SwiftUI
 
 @main
 struct HomeWidget: Widget {
+    // Body of the widget
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: "io.ginder", intent: CustomWidgetConfigurationIntent.self, provider: HomeWidgetProvider()) { entry in
             HomeView(text: entry.text)
@@ -29,6 +30,7 @@ struct HomeWidgetProvider: IntentTimelineProvider {
         completion(entry)
     }
     
+    // This gets called every 5 minutes or when realod called from host app
     func getTimeline(for configuration: CustomWidgetConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let userDefaults = UserDefaults(suiteName: "group.io.ginder")
         guard let lastSavedItem = userDefaults?.value(forKey: "saved_item") as? String else {
@@ -41,11 +43,14 @@ struct HomeWidgetProvider: IntentTimelineProvider {
         completion(timeline)
     }
 }
+
+// Store What goes in to widget
 struct HomeEntry : TimelineEntry {
     var date: Date
     var text: String
 }
 
+// UI of the widget
 struct HomeView: View {
     var text = ""
     init(text: String){

@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    // Load app UI
     private func setApplicationWindow() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = self.window else { return }
