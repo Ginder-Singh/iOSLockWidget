@@ -7,17 +7,22 @@
 		<key>HomeWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>LockWidget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C55C59C028F1F6C900A8A73F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C55C59E228F209FF00A8A73F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
