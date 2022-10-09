@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = self.window else { return }
         window.backgroundColor = UIColor.black
-        let mainViewController = ViewController()
+        let storyboard = UIStoryboard(name: "HomeView", bundle: nil)
+        let mainViewController  = storyboard.instantiateViewController(withIdentifier: "Main") as!ViewController
         let viewController = UINavigationController(rootViewController: mainViewController)
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
             self.window?.rootViewController = viewController

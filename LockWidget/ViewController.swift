@@ -13,23 +13,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // https://developer.apple.com/documentation/xcode/configuring-app-groups
     let userDefaults = UserDefaults(suiteName: "group.io.ginder")
     
-    var background: UIView!
-    var textField: UITextField!
-    var button: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Set up UI and its constraints.
-        addViews()
-        addConstraints()
-        // Load last saved value in to the input field.
-        guard let lastSavedItem = userDefaults?.value(forKey: "saved_item") as? String else {
-            return
-        }
-        textField.text = lastSavedItem
-    }
+    @IBOutlet weak var mainTextField: UITextField!
     
-    @objc func onButtonClick() {
-        guard let text = textField.text else { return }
+    @IBAction func onMainButtonClick(_ sender: Any) {
+        guard let text = mainTextField.text else { return }
         // Save value to shared user defaults
         userDefaults?.set(text, forKey: "saved_item")
         // Reload widget
@@ -40,9 +27,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up UI and its constraints.
+        mainTextField.delegate = self
+        // Load last saved value in to the input field.
+        guard let lastSavedItem = userDefaults?.value(forKey: "saved_item") as? String else {
+            return
+        }
+        mainTextField.text = lastSavedItem
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        textField.resignFirstResponder()
+        mainTextField.resignFirstResponder()
         return true
     }
 }

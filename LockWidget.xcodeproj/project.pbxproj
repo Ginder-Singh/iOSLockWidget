@@ -10,7 +10,6 @@
 		C55C59C528F1F6C900A8A73F /* LockWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55C59C428F1F6C900A8A73F /* LockWidgetApp.swift */; };
 		C55C59C928F1F6CB00A8A73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C55C59C828F1F6CB00A8A73F /* Assets.xcassets */; };
 		C55C59D328F1F6FF00A8A73F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55C59D228F1F6FF00A8A73F /* ViewController.swift */; };
-		C55C59D528F1F74B00A8A73F /* ViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55C59D428F1F74B00A8A73F /* ViewController+UI.swift */; };
 		C55C59E628F20A0000A8A73F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55C59E528F209FF00A8A73F /* WidgetKit.framework */; };
 		C55C59E828F20A0000A8A73F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55C59E728F20A0000A8A73F /* SwiftUI.framework */; };
 		C55C59EB28F20A0000A8A73F /* HomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55C59EA28F20A0000A8A73F /* HomeWidget.swift */; };
@@ -19,6 +18,7 @@
 		C55C59F128F20A0100A8A73F /* HomeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C55C59EC28F20A0000A8A73F /* HomeWidget.intentdefinition */; };
 		C55C59F428F20A0100A8A73F /* HomeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C55C59E328F209FF00A8A73F /* HomeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C582CED328F24447003D7466 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C582CED228F24447003D7466 /* Launch Screen.storyboard */; };
+		C5F3D0E628F29AEC003FF6D2 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F3D0E528F29AEC003FF6D2 /* HomeView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		C55C59C428F1F6C900A8A73F /* LockWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockWidgetApp.swift; sourceTree = "<group>"; };
 		C55C59C828F1F6CB00A8A73F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C55C59D228F1F6FF00A8A73F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C55C59D428F1F74B00A8A73F /* ViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
 		C55C59E328F209FF00A8A73F /* HomeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HomeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C59E528F209FF00A8A73F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C55C59E728F20A0000A8A73F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -61,6 +60,7 @@
 		C582CED028F224CA003D7466 /* LockWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LockWidget.entitlements; sourceTree = "<group>"; };
 		C582CED128F224FC003D7466 /* HomeWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HomeWidgetExtension.entitlements; sourceTree = "<group>"; };
 		C582CED228F24447003D7466 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C5F3D0E528F29AEC003FF6D2 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 				C55C59C428F1F6C900A8A73F /* LockWidgetApp.swift */,
 				C55C59C828F1F6CB00A8A73F /* Assets.xcassets */,
 				C55C59D228F1F6FF00A8A73F /* ViewController.swift */,
-				C55C59D428F1F74B00A8A73F /* ViewController+UI.swift */,
 				C582CED228F24447003D7466 /* Launch Screen.storyboard */,
+				C5F3D0E528F29AEC003FF6D2 /* HomeView.storyboard */,
 			);
 			path = LockWidget;
 			sourceTree = "<group>";
@@ -217,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F3D0E628F29AEC003FF6D2 /* HomeView.storyboard in Resources */,
 				C582CED328F24447003D7466 /* Launch Screen.storyboard in Resources */,
 				C55C59C928F1F6CB00A8A73F /* Assets.xcassets in Resources */,
 			);
@@ -237,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C55C59D528F1F74B00A8A73F /* ViewController+UI.swift in Sources */,
 				C55C59F128F20A0100A8A73F /* HomeWidget.intentdefinition in Sources */,
 				C55C59D328F1F6FF00A8A73F /* ViewController.swift in Sources */,
 				C55C59C528F1F6C900A8A73F /* LockWidgetApp.swift in Sources */,
