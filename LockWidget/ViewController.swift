@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import WidgetKit
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     // One of the way to share data between host app and its extentions
     // https://developer.apple.com/documentation/xcode/configuring-app-groups
     let userDefaults = UserDefaults(suiteName: "group.io.ginder")
@@ -38,5 +38,11 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "", message: "\(text) added successfully.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
     }
 }

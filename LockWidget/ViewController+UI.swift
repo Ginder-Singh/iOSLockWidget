@@ -17,6 +17,9 @@ extension ViewController {
         textField.font = UIFont.systemFont(ofSize: 16)
         textField.backgroundColor = UIColor.white
         textField.layer.cornerRadius = 4
+        textField.textColor = UIColor.red
+        textField.returnKeyType = .done
+        textField.delegate = self
         let paddingView = UIView(frame: CGRectMake(8, 8, 8, 8))
         textField.leftViewMode = .always
         textField.leftView = paddingView
